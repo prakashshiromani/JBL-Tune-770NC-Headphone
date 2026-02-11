@@ -41,6 +41,3 @@ A high-end, Apple-level "scrollytelling" website for the JBL Tune 770NC headphon
    ```bash
    npm run build
    ```
-
----
-*Created and refined with Antigravity AI.*

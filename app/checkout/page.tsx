@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 const colorImages: { [key: string]: { image: string; name: string } } = {
@@ -17,7 +17,7 @@ const fadeUp = {
     animate: { opacity: 1, y: 0 },
 };
 
-export default function CheckoutPage() {
+function CheckoutContent() {
     const searchParams = useSearchParams();
     const colorIndex = searchParams.get("color") || "0";
     const selectedProduct = colorImages[colorIndex] || colorImages["0"];
@@ -626,5 +626,17 @@ export default function CheckoutPage() {
                 </div>
             </div>
         </main>
+    );
+}
+
+export default function CheckoutPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-void text-white/92 flex items-center justify-center">
+                <div className="text-white/40">Loading checkout...</div>
+            </div>
+        }>
+            <CheckoutContent />
+        </Suspense>
     );
 }

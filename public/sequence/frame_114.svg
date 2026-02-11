@@ -1,0 +1,19 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background matching #080707 -->
+  <rect width="1920" height="1080" fill="#080707"/>
+  
+  <!-- Frame indicator -->
+  <text x="960" y="540" font-family="Inter, sans-serif" font-size="48" fill="rgba(255,255,255,0.3)" text-anchor="middle">
+    Frame 114 / 120
+  </text>
+  
+  <!-- Progress indicator -->
+  <text x="960" y="600" font-family="Inter, sans-serif" font-size="24" fill="rgba(255,255,255,0.15)" text-anchor="middle">
+    95% scroll progress
+  </text>
+  
+  <!-- Placeholder headphone representation -->
+  <circle cx="960" cy="400" r="86.30952295749752" fill="none" stroke="rgba(105,92,88,0.3)" stroke-width="4"/>
+  <circle cx="860" cy="400" r="50" fill="rgba(73,76,73,0.2)" stroke="rgba(105,92,88,0.3)" stroke-width="2"/>
+  <circle cx="1060" cy="400" r="50" fill="rgba(73,76,73,0.2)" stroke="rgba(105,92,88,0.3)" stroke-width="2"/>
+</svg>
